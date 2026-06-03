@@ -1,0 +1,262 @@
+.home-page {
+  overflow-x: hidden;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&h=700&fit=crop') center/cover no-repeat;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 20, 60, 0.82), rgba(0, 60, 120, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 40px 24px;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 32px;
+}
+
+/* Hero Search */
+.hero-search {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.hero-tabs {
+  display: flex;
+}
+
+.hero-tabs button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #f0f0f0;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.hero-tabs button.active {
+  background: #006aff;
+  color: #fff;
+}
+
+.hero-search-row {
+  display: flex;
+}
+
+.hero-search-row input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+.hero-search-btn {
+  padding: 16px 32px;
+  background: #006aff;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-search-btn:hover {
+  background: #0055d4;
+}
+
+/* Stats */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding: 40px 24px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  color: #006aff;
+}
+
+.stat-item > span:last-child {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Sections */
+.home-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.home-section h2 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 28px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: #006aff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Cities grid */
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.city-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 160px;
+  transition: transform 0.2s;
+}
+
+.city-card:hover {
+  transform: scale(1.03);
+}
+
+.city-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Featured grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Why section */
+.why-section {
+  background: #f7f9fc;
+  max-width: none;
+  padding: 64px 24px;
+}
+
+.why-section h2 {
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.why-icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.why-card h3 {
+  font-size: 17px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-search-row {
+    flex-direction: column;
+  }
+
+  .stats-bar {
+    gap: 24px;
+  }
+
+  .stat-num {
+    font-size: 22px;
+  }
+}
